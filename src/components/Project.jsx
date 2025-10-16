@@ -20,14 +20,14 @@ export default function Project() {
             id: 2,
             title: "TradeFlow – Portfolio & Transaction Management System",
             description: "TradeFlow is a Java Spring Boot–based financial management system that enables users to monitor stock trades, wallet balance, and portfolio in real time. It ensures smooth integration between order placement, transaction recording, and portfolio updates, maintaining data consistency across all entities.",
-            link: "https://github.com/MrAjayGangwar2001/TradeFlow_SpringMVC_Project.git",
+            link: "https://tradeflowspringmvcproject-production.up.railway.app/",
             technologies: ["Java", "Spring Boot", "JPA", "MySQL", "Lombok", "REST APIs"],
         },
         {
             id: 3,
             title: "Portfolio Website",
             description: "A modern and fully responsive personal portfolio website built with React, showcasing my projects, skills, and professional journey. Designed with a clean UI and smooth navigation, it highlights my expertise in frontend development, Backend development, React components, and interactive web design.",
-            link: "https://example.com/project3",
+            link: "https://portfolio-website-production-4226.up.railway.app/",
             technologies: ["HTML", "CSS", "Javascript", "React", "Bootstrap 5"],
         },
     ];
