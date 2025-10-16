@@ -21,7 +21,7 @@ export default function Project() {
             title: "TradeFlow – Portfolio & Transaction Management System",
             description: "TradeFlow is a Java Spring Boot–based financial management system that enables users to monitor stock trades, wallet balance, and portfolio in real time. It ensures smooth integration between order placement, transaction recording, and portfolio updates, maintaining data consistency across all entities.",
             link: "https://tradeflowspringmvcproject-production.up.railway.app/",
-            technologies: ["Java", "Spring Boot", "JPA", "MySQL", "Lombok", "REST APIs"],
+            technologies: ["Java", "Spring Boot", "SpringMVC", "JPA", "Hibernate", "MySQL", "Lombok", "REST APIs"],
         },
         {
             id: 3,
