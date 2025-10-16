@@ -5,6 +5,13 @@ export default function Navbar() {
   const toggleMenu = () => {
     setMenuOpen(!isMenuopen);
   };
+
+   const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "AjayResume.pdf"; // public folder me resume
+    link.download = "Ajay-Gangwar-Resume.pdf"; // download file name
+    link.click();
+  };
   return (
     <>
       <nav className="w-full bg-gradient bg-primary bg-opacity-90 shadow-lg sticky-top" style={{background: "linear-gradient(to right, #4f46e5, #8b5cf6, #0d9488)"}}>
@@ -54,7 +61,8 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                  onClick={downloadResume}
+                    href="/"
                     className="text-white hover-bg-success hover-text-dark px-3 py-2 rounded-3 text-decoration-none small fw-medium"
                   >
                     Hire Me
