@@ -111,31 +111,32 @@ export default function Navbar() {
                 Home
               </a>
               <a
-                href="#"
+                href="#about"
                 className="text-white hover-bg-success hover-text-dark d-block px-3 py-2 rounded-3 transition-color duration-200 text-decoration-none fw-medium"
               >
                 About
               </a>
               <a
-                href="#"
+                href="#skills"
                 className="text-white hover-bg-success hover-text-dark d-block px-3 py-2 rounded-3 transition-color duration-200 text-decoration-none fw-medium"
               >
                 Skills
               </a>
               <a
-                href="#"
+                onClick={downloadResume}
+                  href="/"
                 className="text-white hover-bg-success hover-text-dark d-block px-3 py-2 rounded-3 transition-color duration-200 text-decoration-none fw-medium"
               >
-                Trace
+                Hire Me
               </a>
               <a
-                href="#"
+                href="#projects"
                 className="text-white hover-bg-success hover-text-dark d-block px-3 py-2 rounded-3 transition-color duration-200 text-decoration-none fw-medium"
               >
                 Projects
               </a>
               <a
-                href="#"
+                href="#contact"
                 className="text-white hover-bg-success hover-text-dark d-block px-3 py-2 rounded-3 transition-color duration-200 text-decoration-none fw-medium"
               >
                 Contacts
