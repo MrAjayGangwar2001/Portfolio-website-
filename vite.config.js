@@ -7,5 +7,6 @@ export default defineConfig({
   server: {
     host: true, // allows LAN access
     port: 5173,
+    base: './',
   },
 });
