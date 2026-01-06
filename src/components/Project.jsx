@@ -27,7 +27,7 @@ export default function Project() {
             id: 3,
             title: "Portfolio Website",
             description: "A modern and fully responsive personal portfolio website built with React, showcasing my projects, skills, and professional journey. Designed with a clean UI and smooth navigation, it highlights my expertise in frontend development, Backend development, React components, and interactive web design.",
-            link: "https://portfolio-website-7tc9.vercel.app/",
+            link: "https://portfolio-ajay-gangwar.vercel.app",
             technologies: ["HTML", "CSS", "Javascript", "React", "Bootstrap 5"],
         },
     ];
