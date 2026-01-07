@@ -8,7 +8,7 @@ const TypingEffect = () => {
 
   useEffect(() => {
     typedInstance.current = new Typed(typedRef.current, {
-      strings: ["Web Developer", "Java Developer"],
+      strings: ["Software Developer", "Java Developer"],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1000,
