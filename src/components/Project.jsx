@@ -30,6 +30,13 @@ export default function Project() {
             link: "https://portfolio-ajay-gangwar.vercel.app",
             technologies: ["HTML", "CSS", "Javascript", "React", "Bootstrap 5"],
         },
+        {
+            id: 4,
+            title: "AI Email Assistant (Chrome Extention + Web App)",
+            description: "Built a scalable AI-powered email assistant using React (Vite), Material UI, and Spring Boot REST APIs with Gemini Generative AI integration.Developed a Chrome Extension(Manifest V3) for real - time, context- aware email response generation.Deployed on AWS EC2, S3, and CloudFront with HTTPS, CORS, and cache optimization.Handled production - grade issues including 403 / 405 errors, routing, and deployment troubleshooting end - to - end.",
+            link: "https://dr41zrycf9nrg.cloudfront.net",
+            technologies: ["HTML", "CSS", "Javascript", "React", "Bootstrap 5", "Springboot", "Resp APIs", "Material UI", "AWS EC2", "S3", "Cloudfront", "Gemini API"],
+        },
     ];
 
     return (
