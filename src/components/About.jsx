@@ -42,19 +42,34 @@ export default function About() {
           {[
             {
               title: "Frontend Developer",
-              desc: "HTML, CSS, JavaScript, Bootstrap, React",
+              desc: "HTML, CSS, JavaScript, Bootstrap, React, Redux, Material UI",
               color: "text-primary",
             },
             {
               title: "Backend Developer",
-              desc: "Java, Springboot, SpringMVC, Hibernate, RestfullAPIs, databases",
+              desc: "Java, Springboot, SpringMVC, Hibernate, Rest APIs, Spring Data JPA, Spring Security, JWT, OAuth, JDBC, JSP & Servlet",
               color: "text-success",
             },
-            { title: "Database", desc: "SQL", color: "text-warning" },
+            { title: "Database", desc: "MySQL – Schema Design & Query Optimization", color: "text-warning" },
             {
               title: "Microservices",
               desc: "Building scalable microservices architecture",
               color: "text-danger",
+            },
+            {
+              title: "Web Services & APIs",
+              desc: "Rest APIs, JSON, XML, YAML, JWT",
+              color: "text-primary",
+            },
+            {
+              title: "Tool & Platforms",
+              desc: "VS Code, IntelliJ IDEA, Eclipse, Git, Github, Postman, Rapid APIs, Maven",
+              color: "text-success",
+            },
+            {
+              title: "Deployment",
+              desc: "AWS, EC2, S3, Cloudfront, Render, Railway, Infinity free, Vercel",
+              color: "text-warning",
             },
           ].map((item, index) => (
             <div className="col-md-6 col-lg-3" key={index}>
