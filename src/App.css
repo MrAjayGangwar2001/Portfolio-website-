@@ -1,46 +1,392 @@
 
-html {
-  height: 100%;
-  scroll-behavior: smooth;
+/* ═══════════════════════════════════════════════
+   DARK THEME — Ajay Gangwar Portfolio
+   Palette:
+     bg-deep   #0a0a0f   (page background)
+     bg-card   #13131a   (cards, sections)
+     bg-muted  #1a1a26   (subtle surface)
+     border    #2a2a3d   (dividers)
+     accent    #6366f1   (indigo — primary CTA)
+     accent2   #a855f7   (violet — gradient end)
+     lime      #84cc16   (green highlight — used sparingly)
+     text-1    #f1f5f9   (primary text)
+     text-2    #94a3b8   (muted text)
+═══════════════════════════════════════════════ */
+
+/* ── ROOT VARS ── */
+:root {
+  --bg-deep:   #0a0a0f;
+  --bg-card:   #13131a;
+  --bg-muted:  #1a1a26;
+  --border:    #2a2a3d;
+  --accent:    #6366f1;
+  --accent2:   #a855f7;
+  --lime:      #84cc16;
+  --text-1:    #f1f5f9;
+  --text-2:    #94a3b8;
+  --text-3:    #64748b;
+  --radius:    12px;
+  --radius-sm: 8px;
 }
 
-/* App.css */
+/* ── GLOBAL ── */
+*, *::before, *::after { box-sizing: border-box; }
 
-html, body, #root {
-  height: 100%;
+body {
   margin: 0;
+  background: var(--bg-deep);
+  color: var(--text-1);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.bg-gradient-page {
+.app-dark {
   min-height: 100vh;
+  background: var(--bg-deep);
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ══════════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════════ */
+.navbar-dark-custom {
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  top: 0;
+  position: sticky;
+}
+
+.navbar-brand-custom {
   display: flex;
-  flex-direction: column;
-  background: linear-gradient(to right, #6366f1, #8b5cf6, #14b8a6);
-  background-size: cover;
-  background-repeat: no-repeat;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-1) !important;
+  letter-spacing: 0.3px;
 }
 
-.hover-bg-success:hover {
-  background-color: #198754 !important;
-}
-.hover-text-dark:hover {
-  color: #212529 !important;
-}
-.transition-color {
-  transition: color 0.2s, background-color 0.2s;
-}
-.focus-outline-none:focus {
-  outline: none;
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  flex-shrink: 0;
 }
 
-a {
-  color: inherit;
-  transition: transform 0.2s;
+.nav-link-custom {
+  color: var(--text-2);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s, background 0.2s;
 }
-a:hover {
-  transform: scale(1.2);
-  opacity: 0.9;
+.nav-link-custom:hover {
+  color: var(--text-1);
+  background: var(--bg-muted);
 }
 
+.btn-hire-custom {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 18px;
+  border-radius: 20px;
+  transition: opacity 0.2s, transform 0.15s;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+.btn-hire-custom:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
 
+.mobile-menu-custom {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+}
+.nav-link-mobile {
+  color: var(--text-2);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  display: block;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link-mobile:hover {
+  background: var(--bg-muted);
+  color: var(--text-1);
+}
 
+/* ══════════════════════════════════════════════
+   SECTIONS — override Bootstrap bg-white etc.
+══════════════════════════════════════════════ */
+section {
+  background: transparent;
+}
+
+/* ══════════════════════════════════════════════
+   ABOUT
+══════════════════════════════════════════════ */
+.about-section {
+  background: var(--bg-deep);
+  color: var(--text-1);
+}
+
+/* profile image ring */
+.about-section img {
+  border-color: var(--border) !important;
+  box-shadow: 0 0 0 3px var(--accent), 0 8px 32px rgba(99,102,241,0.25) !important;
+}
+
+/* headings inside About */
+.about-section h1,
+.about-section h2,
+.about-section h3 {
+  color: var(--text-1);
+}
+
+.about-section .text-warning {
+  color: var(--accent2) !important;
+}
+
+/* cards inside About — Professional Journey, Interests */
+.about-section .bg-white,
+.about-section .bg-primary {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-1) !important;
+}
+
+.about-section .bg-primary.text-white {
+  background: linear-gradient(135deg, var(--accent), var(--accent2)) !important;
+  border: none !important;
+}
+
+.about-section .text-muted { color: var(--text-2) !important; }
+.about-section strong      { color: var(--text-1); }
+
+/* experience badge */
+.about-section .badge.bg-secondary {
+  background: var(--bg-muted) !important;
+  color: var(--text-2) !important;
+  border: 1px solid var(--border);
+}
+
+/* skill cards inside About */
+.about-section .card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+}
+.about-section .card .text-primary  { color: #818cf8 !important; }
+.about-section .card .text-success  { color: #4ade80 !important; }
+.about-section .card .text-warning  { color: #fbbf24 !important; }
+.about-section .card .text-danger   { color: #f87171 !important; }
+
+/* CTA buttons */
+.about-section .btn-light {
+  background: var(--text-1) !important;
+  color: var(--bg-deep) !important;
+  border: none !important;
+  font-weight: 600;
+}
+.about-section .btn-outline-light {
+  border-color: rgba(255,255,255,0.35) !important;
+  color: var(--text-1) !important;
+}
+.about-section .btn-outline-light:hover {
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* ══════════════════════════════════════════════
+   SKILLS
+══════════════════════════════════════════════ */
+.skills-section {
+  background: var(--bg-muted);
+  color: var(--text-1);
+}
+
+.skills-section h2      { color: #818cf8 !important; }
+.skills-section .text-muted { color: var(--text-2) !important; }
+
+/* toggle buttons */
+.skills-section .btn-success {
+  background: linear-gradient(135deg, var(--accent), var(--accent2)) !important;
+  border: none !important;
+  color: #fff !important;
+}
+.skills-section .btn-outline-secondary {
+  border-color: var(--border) !important;
+  color: var(--text-2) !important;
+  background: transparent !important;
+}
+.skills-section .btn-outline-secondary:hover {
+  background: var(--bg-muted) !important;
+  color: var(--text-1) !important;
+}
+
+/* skill cards */
+.skills-section .card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.skills-section .card:hover {
+  border-color: var(--accent) !important;
+  transform: translateY(-2px);
+}
+.skills-section .card-title  { color: var(--text-1) !important; }
+.skills-section small.text-muted { color: var(--text-3) !important; }
+
+/* progress bars */
+.skills-section .progress {
+  background: var(--border) !important;
+}
+
+/* ══════════════════════════════════════════════
+   PROJECTS
+══════════════════════════════════════════════ */
+.projects-section {
+  background: var(--bg-deep);
+  color: var(--text-1);
+}
+
+.projects-section h2      { color: var(--text-1) !important; }
+.projects-section .text-muted { color: var(--text-2) !important; }
+
+.projects-section .card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+.projects-section .card:hover {
+  border-color: var(--accent) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.18) !important;
+}
+.projects-section .card-title { color: var(--text-1) !important; }
+.projects-section .card-text  { color: var(--text-2) !important; }
+
+/* tech badges */
+.projects-section .badge {
+  background: var(--bg-muted) !important;
+  color: var(--text-2) !important;
+  border: 1px solid var(--border) !important;
+  font-weight: 500 !important;
+}
+
+/* buttons */
+.projects-section .btn-dark {
+  background: var(--bg-muted) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-1) !important;
+}
+.projects-section .btn-dark:hover {
+  background: var(--border) !important;
+}
+.projects-section .btn-outline-primary {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: transparent !important;
+}
+.projects-section .btn-outline-primary:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+/* ══════════════════════════════════════════════
+   CONTACT — keep existing structure, theme it
+══════════════════════════════════════════════ */
+.contact-section {
+  background: var(--bg-muted);
+  color: var(--text-1);
+}
+.contact-section h2,
+.contact-section h3 { color: var(--text-1) !important; }
+.contact-section .text-muted { color: var(--text-2) !important; }
+.contact-section .bg-white,
+.contact-section .card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text-1) !important;
+}
+.contact-section input,
+.contact-section textarea,
+.contact-section select {
+  background: var(--bg-muted) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-1) !important;
+  border-radius: var(--radius-sm) !important;
+}
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+  color: var(--text-3) !important;
+}
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+  outline: none !important;
+  background: var(--bg-card) !important;
+}
+.contact-section .btn-primary,
+.contact-section button[type="submit"] {
+  background: linear-gradient(135deg, var(--accent), var(--accent2)) !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+  padding: 10px 28px !important;
+  transition: opacity 0.2s !important;
+}
+.contact-section .btn-primary:hover { opacity: 0.88 !important; }
+
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
+footer,
+.footer-section {
+  background: var(--bg-card) !important;
+  border-top: 1px solid var(--border) !important;
+  color: var(--text-2) !important;
+}
+footer a { color: var(--text-2) !important; text-decoration: none; }
+footer a:hover { color: var(--text-1) !important; }
+
+/* ══════════════════════════════════════════════
+   TYPED / TYPING EFFECT
+══════════════════════════════════════════════ */
+.typed-cursor { color: var(--accent); }
+
+/* ══════════════════════════════════════════════
+   UTILITY OVERRIDES
+══════════════════════════════════════════════ */
+.text-info    { color: #818cf8 !important; }
+.text-warning { color: #fbbf24 !important; }
+.text-success { color: #4ade80 !important; }
+.text-danger  { color: #f87171 !important; }
+.text-muted   { color: var(--text-2) !important; }
+
+/* selection highlight */
+::selection {
+  background: rgba(99,102,241,0.3);
+  color: var(--text-1);
+}
