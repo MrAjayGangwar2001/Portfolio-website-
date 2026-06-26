@@ -14,7 +14,7 @@ export default function Contact() {
     setStatus("sending");
 
     const formData = new FormData();
-    formData.append("access_key", "my access key"); // <-- apni key yahan
+    formData.append("access_key", "d26628f9-7385-4687-b864-4244032ee876");
     formData.append("name", form.name);
     formData.append("email", form.email);
     formData.append("message", form.message);
