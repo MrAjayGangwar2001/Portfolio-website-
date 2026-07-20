@@ -9,7 +9,7 @@ export default function Project() {
             description:
                 "Engineered a scalable AI-powered email assistant using React (Vite), Material UI, and Spring Boot REST APIs with Gemini Generative AI. Developed a Chrome Extension (Manifest V3) for real-time, context-aware email response generation directly inside Gmail. Deployed on AWS EC2, S3, and CloudFront with HTTPS, CORS, and cache optimization.",
             github: "https://github.com/MrAjayGangwar2001/Email_Assisstant_App.git",
-            live: "https://dr41zrycf9nrg.cloudfront.net",
+            live: "https://email-assisstant-app.vercel.app",
             technologies: [
                 "React (Vite)", "Spring Boot", "Gemini API", "Material UI",
                 "AWS EC2", "S3", "CloudFront", "REST APIs", "Chrome Extension",
