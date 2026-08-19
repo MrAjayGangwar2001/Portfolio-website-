@@ -3,20 +3,18 @@ import { ExternalLink, Github } from "lucide-react";
 
 export default function Project() {
     const projectData = [
-
-         {
-        id: 5,
-        title: "StubLine — Real-Time Event Booking & Payment Platform",
-        description:
-            "A full-stack event booking platform solving concurrent seat-booking race conditions with Redis distributed locking (SETNX) and live WebSocket-based seat status updates. Integrated Razorpay payments with server-side HMAC signature verification plus a webhook-based backup confirmation path. Built Kafka-driven async processing for PDF ticket and QR code generation, JWT-based auth (email/password, OTP, Google Sign-In), and a full admin operations layer with a role-based admin hierarchy and site analytics.",
-        github: "https://github.com/MrAjayGangwar2001/StubLine-Event-Booking-Platform.git",
-        live: null,
-        technologies: [
-            "Java", "Spring Boot", "Spring Security", "JWT", "MySQL",
-            "Redis", "Apache Kafka", "WebSocket (STOMP)", "Razorpay API",
-            "React (Vite)", "Docker",
-        ],
-    },
+        {
+            id: 0,
+            title: "Mail Mind — AI Email Intelligence System",
+            description:
+                "Self-hosted AI pipeline that triages Gmail during active job search: n8n polls Gmail, an LLM (Groq/Llama 3.1) classifies each email into 6 categories (recruiter responses, bank alerts, personal, business, deliveries, other important), Spring Boot + PostgreSQL store only what matters, and Telegram delivers instant alerts. React dashboard is an installable PWA with a read/unread triage workflow and full delete support.",
+            github: "https://github.com/MrAjayGangwar2001/AI-Email-Intelligence-System.git",
+            live: null,
+            technologies: [
+                "Java", "Spring Boot", "React (Vite)", "PostgreSQL",
+                "n8n", "Groq API / LLM", "Docker", "PWA", "Telegram Bot API",
+            ],
+        },
         {
             id: 1,
             title: "AI Email Assistant — Chrome Extension + Web App",
@@ -62,6 +60,19 @@ export default function Project() {
             live: null,
             technologies: ["HTML5", "CSS3", "JavaScript (Vanilla JS)", "Gemini API"],
         },
+{
+        id: 5,
+        title: "StubLine — Real-Time Event Booking & Payment Platform",
+        description:
+            "A full-stack event booking platform solving concurrent seat-booking race conditions with Redis distributed locking (SETNX) and live WebSocket-based seat status updates. Integrated Razorpay payments with server-side HMAC signature verification plus a webhook-based backup confirmation path. Built Kafka-driven async processing for PDF ticket and QR code generation, JWT-based auth (email/password, OTP, Google Sign-In), and a full admin operations layer with a role-based admin hierarchy and site analytics.",
+        github: "https://github.com/MrAjayGangwar2001/StubLine-Event-Booking-Platform.git",
+        live: null,
+        technologies: [
+            "Java", "Spring Boot", "Spring Security", "JWT", "MySQL",
+            "Redis", "Apache Kafka", "WebSocket (STOMP)", "Razorpay API",
+            "React (Vite)", "Docker",
+        ],
+    },
     ];
 
     return (
