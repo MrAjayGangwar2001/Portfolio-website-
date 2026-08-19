@@ -5,7 +5,7 @@ export default function Project() {
     const projectData = [
         {
             id: 0,
-            title: "Mail Mind — AI Email Intelligence System",
+            title: "Mail Manager — AI Email Intelligence System",
             description:
                 "Self-hosted AI pipeline that triages Gmail during active job search: n8n polls Gmail, an LLM (Groq/Llama 3.1) classifies each email into 6 categories (recruiter responses, bank alerts, personal, business, deliveries, other important), Spring Boot + PostgreSQL store only what matters, and Telegram delivers instant alerts. React dashboard is an installable PWA with a read/unread triage workflow and full delete support.",
             github: "https://github.com/MrAjayGangwar2001/AI-Email-Intelligence-System.git",
